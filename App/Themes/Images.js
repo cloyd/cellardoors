@@ -1,5 +1,18 @@
 // leave off @2x/@3x
 const images = {
+
+  signInHeader: require('../Images/signin-header.jpg'),
+  signUpHeader: require('../Images/signup-header.jpg'),
+  topLogo: require('../Images/top_logo.png'),
+
+  tutorialSlider1: require('../Images/tutorial-slider1.jpg'),
+  tutorialSlider2: require('../Images/tutorial-slider2.jpg'),
+  tutorialSlider3: require('../Images/tutorial-slider3.jpg'),
+  tutorialSlider4: require('../Images/tutorial-slider4.jpg'),
+  tutorialSlider5: require('../Images/tutorial-slider5.jpg'),
+
+
+
   logo: require('../Images/ir.png'),
   clearLogo: require('../Images/top_logo.png'),
   launch: require('../Images/launch-icon.png'),

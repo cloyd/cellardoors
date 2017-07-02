@@ -1,9 +1,17 @@
 import { put, select } from 'redux-saga/effects'
 import GithubActions from '../Redux/GithubRedux'
+import AppStateActions, {isRehydrationComplete} from '../Redux/AppStateRedux'
+import LoggedInActions, { isLoggedIn, isNew } from '../Redux/LoginRedux'
+
 import { is } from 'ramda'
 
 // exported to make available for tests
 export const selectAvatar = (state) => state.github.avatar
+export const selectLoggedInStatus = (state) => isLoggedIn(state.login)
+export const selectNewStatus = (state) => isNew(state.login)
+
+export const localStorage = (state) => isRehydrationComplete(state.appState)
+
 
 // process STARTUP actions
 export function * startup (action) {
@@ -32,9 +40,29 @@ export function * startup (action) {
       }
     })
   }
-  const avatar = yield select(selectAvatar)
+
+  // console.log('action', action)
+  // const avatar = yield select(selectAvatar)
+  // console.log('avatar', avatar)
   // only get if we don't have it yet
-  if (!is(String, avatar)) {
-    yield put(GithubActions.userRequest('GantMan'))
+  // if (!is(String, avatar)) {
+  //   yield put(GithubActions.userRequest('GantMan'))
+  // }
+  const local = yield select(localStorage)
+  console.log('local', local)
+  if (!local) {
+    yield put(AppStateActions.setRehydrationComplete())
   }
+    const isNew = yield select(selectNewStatus)
+    const isLoggedIn = yield select(selectLoggedInStatus)
+    console.log('isNew', isNew)
+    console.log('isLoggedIn', isLoggedIn)  
+
+    if (isNew) {
+      yield put(LoggedInActions.tutorial())
+    } else {
+      if (isLoggedIn) {
+        yield put(LoggedInActions.autoLogin())
+      }
+    }
 }

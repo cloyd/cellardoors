@@ -5,6 +5,10 @@ import { Provider } from 'react-redux'
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 
+import { StyleProvider } from 'native-base'
+import getTheme from '../Themes/native-base-theme/components'
+import cellardoorsTheme from '../Themes/native-base-theme/variables/cellardoorsTheme'
+
 // create our store
 const store = createStore()
 
@@ -21,7 +25,9 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        <RootContainer />
+        <StyleProvider style={getTheme(cellardoorsTheme)}>
+          <RootContainer />
+        </StyleProvider>
       </Provider>
     )
   }

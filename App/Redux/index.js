@@ -5,7 +5,10 @@ import rootSaga from '../Sagas/'
 export default () => {
   /* ------------- Assemble The Reducers ------------- */
   const rootReducer = combineReducers({
+    appState: require('./AppStateRedux').reducer,
     nav: require('./NavigationRedux').reducer,
+    login: require('./LoginRedux').reducer,
+    signup: require('./SignupRedux').reducer,
     github: require('./GithubRedux').reducer,
     search: require('./SearchRedux').reducer
   })

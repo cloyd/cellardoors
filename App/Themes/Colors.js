@@ -1,4 +1,15 @@
 const colors = {
+  brandPrimary: '#dc5b5b',
+  brandInfo: '#65abd0',
+  brandSuccess: '#24aa98',
+  brandDanger: '#db7560',
+  brandWarning: '#d9c26c',
+  brandSidebar: '#eaeaea',
+  brandTitle: '#dc5b5b',
+  grayText: '#b4bbc2',
+  grayButton: '#c6ccd2',
+  text: '#606468',
+  white: '#ffffff',
   background: '#1F0808',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
@@ -21,7 +32,6 @@ const colors = {
   eggplant: '#251a34',
   border: '#483F53',
   banner: '#5F3E63',
-  text: '#E0D7E5'
 }
 
 export default colors
