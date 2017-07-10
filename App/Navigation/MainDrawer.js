@@ -8,6 +8,10 @@ import WineRegion from '../Containers/WineRegion'
 import Results from '../Containers/Results'
 import CheckIn from '../Containers/CheckIn'
 
+import HomeScreen from '../Containers/HomeScreen'
+import RegionDetail from '../Containers/RegionDetail'
+import ResultListings from '../Containers/ResultsListings'
+
 import styles from './Styles/NavigationStyles'
 
 const DrawerIcon = ({ navigate }) => {
@@ -34,19 +38,32 @@ const ProfileIcon = ({ navigate }) => {
   )
 }
 
+const BackIcon = ({ goBack }) => {
+  return (
+    <Icon
+      name='md-arrow-back'
+      size={28}
+      color='#fff'
+      onPress={() => goBack()}
+      style={{ paddingLeft: 20 }}
+    />
+  )
+}
+
 const defaultNavigationOptions = {
   navigationOptions: ({navigation}) => ({
-    title: 'Cellardoors.co',
+    title: 'CELLARDOORS.CO',
     headerRight: <ProfileIcon {...navigation} />,
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
-    headerBackTitle: null
+    headerBackTitle: null,
+    headerBackTitleStyle: styles.headerTitle
   })
 }
 
 export const HomeStack = StackNavigator({
-  Screen1: {
-    screen: Screen1,
+  HomeScreen: {
+    screen: HomeScreen,
     navigationOptions: ({navigation}) => ({
       headerLeft: <DrawerIcon {...navigation} />,
       headerRight: <ProfileIcon {...navigation} />
@@ -61,7 +78,7 @@ export const ResultsStack = StackNavigator({
   Results: {
     screen: Results,
     navigationOptions: ({navigation}) => ({
-      title: 'Cellardoors.co',
+      title: 'CELLARDOORS.CO',
       headerLeft: <DrawerIcon {...navigation} />,
       headerRight: <ProfileIcon {...navigation} />
     })
@@ -72,7 +89,7 @@ export const WineRegionsStack = StackNavigator({
   WineRegions: {
     screen: WineRegions,
     navigationOptions: ({navigation}) => ({
-      title: 'Cellardoors.co',
+      title: 'WINE REGIONS',
       headerLeft: <DrawerIcon {...navigation} />,
       headerRight: <ProfileIcon {...navigation} />
     })
@@ -80,13 +97,22 @@ export const WineRegionsStack = StackNavigator({
   WineRegion: {
     screen: WineRegion,
     navigationOptions: ({navigation}) => ({
-      title: navigation.state.params.name
+      title: navigation.state.params.name,
+      headerLeft: <BackIcon {...navigation} />
+    })
+  },
+  RegionDetail: {
+    screen: RegionDetail,
+    navigationOptions: ({navigation}) => ({
+      title: navigation.state.params.title,
+      headerLeft: <BackIcon {...navigation} />
     })
   },
   WineRegionListings: {
-    screen: Results,
+    screen: ResultListings,
     navigationOptions: ({navigation}) => ({
-      title: navigation.state.params.name || 'Cellardoors.co'
+      title: navigation.state.params.title || 'CELLARDOORS.CO',
+      headerLeft: <BackIcon {...navigation} />
     })
   }
 }, defaultNavigationOptions)
@@ -95,7 +121,7 @@ export const CheckInStack = StackNavigator({
   CheckIn: {
     screen: CheckIn,
     navigationOptions: ({navigation}) => ({
-      title: 'Cellardoors.co',
+      title: 'CELLARDOORS.CO',
       headerLeft: <DrawerIcon {...navigation} />,
       headerRight: <ProfileIcon {...navigation} />
     })

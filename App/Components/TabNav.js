@@ -55,7 +55,6 @@ class TabNav extends React.Component {
     const { activeButton } = this.state
     const buttonStyle = (item.id === activeButton) ? 'active' : 'notActive'
     const buttonTextStyle = (item.id === activeButton) ? 'textActive' : 'textNotActive'
-    console.tron.log(item)
     return (
       <Button style={Styles[buttonStyle]} onPress={() => this.handleSetActiveButton(item)}>
         <Text style={Styles[buttonTextStyle]}>{_.capitalize(item.label)}</Text>

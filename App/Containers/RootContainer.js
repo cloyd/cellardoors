@@ -11,7 +11,7 @@ import styles from './Styles/RootContainerStyles'
 
 class RootContainer extends Component {
   componentDidMount () {
-    console.tron.log({'props': this.props})    
+    // console.tron.log({'props': this.props})    
     // if redux persist is not active fire startup action
     if (!ReduxPersist.active) {
       this.props.startup()
@@ -20,11 +20,11 @@ class RootContainer extends Component {
 
   componentWillReceiveProps (newProps) {
     this.forceUpdate()
-    console.log('newProps', newProps)
+    // console.log('newProps', newProps)
   }
   
   renderFooterTabs = () => {
-    console.tron.log({'props': this.props})
+    // console.tron.log({'props': this.props})
     if (!this.props.new) {
        return <FooterTabs style={{ backgroundColor: 'rgba(0,0,0,0.75)', position: 'absolute', bottom: 0, zIndex: 2 }}/>
     }

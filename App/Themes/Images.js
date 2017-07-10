@@ -11,7 +11,16 @@ const images = {
   tutorialSlider4: require('../Images/tutorial-slider4.jpg'),
   tutorialSlider5: require('../Images/tutorial-slider5.jpg'),
 
+  slider1: require('../Images/slider-img-1.jpg'),
+  slider2: require('../Images/slider-img-2.jpg'),
+  slider3: require('../Images/slider-img-3.jpg'),
+  slider4: require('../Images/slider-img-4.jpg'),
 
+  canberraDistrict: require('../Images/canberra-district.jpg'),
+  corwa: require('../Images/cowra.jpg'),
+  gundagai: require('../Images/gundagai.jpg'),
+  hilltops: require('../Images/hilltops.jpg'),
+  hunterValley: require('../Images/hunterValley.jpg'),
 
   logo: require('../Images/ir.png'),
   clearLogo: require('../Images/top_logo.png'),

@@ -6,24 +6,26 @@ import DebugConfig from '../Config/DebugConfig'
 /* ------------- Types ------------- */
 
 import { StartupTypes } from '../Redux/StartupRedux'
-import { GithubTypes } from '../Redux/GithubRedux'
 import { LoginTypes } from '../Redux/LoginRedux'
 import { SignupTypes } from '../Redux/SignupRedux'
-
+import { HomeTypes } from '../Redux/HomeRedux'
+import { RegionTypes } from '../Redux/RegionRedux'
+import { SearchTypes } from '../Redux/SearchRedux'
 
 /* ------------- Sagas ------------- */
 
 import { startup } from './StartupSagas'
-import { getUserAvatar } from './GithubSagas'
 import { login } from './LoginSagas'
 import { signup } from './SignupSagas'
-
+import { home } from './HomeSaga'
+import { regions } from './RegionSagas'
+import { search } from './SearchSagas'
 
 /* ------------- API ------------- */
 
 // The API we use is only used from Sagas, so we create it here and pass along
 // to the sagas which need it.
-const api = DebugConfig.useFixtures ? FixtureAPI : API.create()
+// const api = DebugConfig.useFixtures ? FixtureAPI : API.create()
 
 /* ------------- Connect Types To Sagas ------------- */
 
@@ -34,7 +36,11 @@ export default function * root () {
     takeLatest(LoginTypes.LOGIN_REQUEST, login),
     takeLatest(SignupTypes.SIGNUP_REQUEST, signup),
 
+    takeLatest(HomeTypes.HOME_REQUEST, home),
+    takeLatest(RegionTypes.REGION_REQUEST, regions, FixtureAPI),
+    takeLatest(SearchTypes.SEARCH, search)
+
     // some sagas receive extra parameters in addition to an action
-    takeLatest(GithubTypes.USER_REQUEST, getUserAvatar, api)
+    // takeLatest(GithubTypes.USER_REQUEST, getUserAvatar, api)
   ]
 }

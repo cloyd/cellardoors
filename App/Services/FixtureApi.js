@@ -1,5 +1,11 @@
 export default {
   // Functions return fixtures
+  getRegions: () => {
+    return {
+      ok: true,
+      data: require('../Fixtures/regions.json')
+    }
+  },
   getRoot: () => {
     return {
       ok: true,

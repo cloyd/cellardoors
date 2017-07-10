@@ -12,6 +12,8 @@ export default () => {
     github: require('./GithubRedux').reducer,
     search: require('./SearchRedux').reducer,
     footerTabs: require('./FooterTabsRedux').reducer,
+    home: require('./HomeRedux').reducer,
+    regions: require('./RegionRedux').reducer
   })
 
   return configureStore(rootReducer, rootSaga)

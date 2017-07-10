@@ -1,0 +1,17 @@
+{
+  "regions": [
+    {"id": 1, "title": "Canberra District", "image": "canberraDistrict", "geo": {"lat": -35.5217551, "long": 148.8001222, "zoom": 10}},
+    {"id": 2, "title": "Cowra", "image": "corwa", "geo": {"lat": -33.8499221, "long": 148.4947148, "zoom": 11}},
+    {"id": 3, "title": "Gundagai", "image": "gundagai", "geo": {"lat": -35.0446913, "long": 148.0604727, "zoom": 13}},
+    {"id": 4, "title": "Hilltops", "image": "hilltops", "geo": {"lat": -34.3438822, "long": 150.4430588, "zoom": 13}},
+    {"id": 5, "title": "Hunter Valley", "image": "hunterValley", "geo": {"lat": -32.741284, "long": 142.8196613, "zoom": 6}},
+    {"id": 6, "title": "Mudge", "image": "gundagai", "geo": {"lat": -32.741284, "long": 142.8196613, "zoom": 6}},
+    {"id": 7, "title": "New England", "image": "hilltops", "geo": {"lat": -32.741284, "long": 142.8196613, "zoom": 6}},
+    {"id": 8, "title": "Orange", "image": "corwa", "geo": {"lat": -33.2508791, "long": 148.9915525, "zoom": 12}},
+    {"id": 9, "title": "Perricoota", "image": "corwa", "geo": {"lat": -32.741284, "long": 142.8196613, "zoom": 6}},
+    {"id": 10, "title": "Riverina", "image": "corwa", "geo": {"lat": -32.741284, "long": 142.8196613, "zoom": 6}},
+    {"id": 11, "title": "Shoalhaven Coast", "image": "corwa", "geo": {"lat": -32.741284, "long": 142.8196613, "zoom": 6}},
+    {"id": 12, "title": "Southern Highlands", "image": "corwa", "geo": {"lat": -34.4900601, "long": 150.0739998, "zoom": 10}},
+    {"id": 13, "title": "Tumbarumba", "image": "corwa", "geo": {"lat": -35.7260762, "long": 147.9672076, "zoom": 12}}
+  ]
+}
