@@ -7,11 +7,10 @@ import LoginActions from '../Redux/LoginRedux'
 
 class AuthenticatedScreen extends React.Component {
   render () {
-    console.log('this.props', this.props)
     const { navigate } = this.props.navigation
     return (
       <View style={styles.container}>
-        <Text style={styles.headerText}>You are logged in</Text>
+        <Text style={styles.headerText}>Home</Text>
         <RoundedButton
           text='Go to Another Authenticated Screen'
           onPress={() => navigate('AnotherAuthenticatedScreen')}

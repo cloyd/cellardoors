@@ -16,7 +16,6 @@ class Nativebase extends React.Component {
   }
 
   componentDidMount () {
-    console.log('native base', this.props)
   }
 
   render () {

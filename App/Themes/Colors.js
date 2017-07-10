@@ -10,7 +10,7 @@ const colors = {
   grayButton: '#c6ccd2',
   text: '#606468',
   white: '#ffffff',
-  background: '#1F0808',
+  background: '#f1f2f6',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',

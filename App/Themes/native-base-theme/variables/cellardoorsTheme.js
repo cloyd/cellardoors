@@ -123,6 +123,7 @@ export default {
   brandTitle: '#dc5b5b',
   grayText: '#b4bbc2',
   text: '#606468',
+  gray: '#c6ccd2',
 
   // Font
   fontFamily: platform === "ios" ? "System" : "Roboto",
@@ -143,12 +144,12 @@ export default {
   footerDefaultBg: "#2874F0",
 
   // FooterTab
-  tabBarTextColor: "#8bb3f4",
+  tabBarTextColor: "#c6ccd2",
   tabBarTextSize: platform === "ios" ? 14 : 11,
-  activeTab: platform === "ios" ? "#007aff" : "#fff",
-  sTabBarActiveTextColor: "#007aff",
-  tabBarActiveTextColor: "#fff",
-  tabActiveBgColor: platform === "ios" ? "#1569f4" : undefined,
+  activeTab: platform === "ios" ? "#ffcb05" : "#ffcb05",
+  sTabBarActiveTextColor: "#ffcb05",
+  tabBarActiveTextColor: "#ffcb05",
+  tabActiveBgColor: 'transparent',
 
   // Tab
   tabDefaultBg: "#2874F0",
