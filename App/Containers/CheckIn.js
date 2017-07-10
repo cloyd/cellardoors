@@ -46,9 +46,7 @@ class CheckIn extends Component {
 
     const accountId = (user.hasOwnProperty('id')) ? user.id : 1
     // console.log({accountId, itemId})
-    redeem({accountId, itemId})
-    // NavigationActions.profile({animation: 'fade'})
-    // NavigationActions.refresh()
+    // redeem({accountId, itemId})
   }
 
   renderBottomContent = () => {
@@ -74,9 +72,6 @@ const styles = StyleSheet.create({
 
   cameraContainer: {
     height: Dimensions.get('window').height - 64,
-    borderColor: '#03A9F4',
-    borderWidth: 1,
-    backgroundColor: 'red'
     // marginTop: 10,
     // paddingTop: 0
   },
